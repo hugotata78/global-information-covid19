@@ -22,6 +22,7 @@ const TableCountries = ({
                 <Table>
                     <TableHead>
                         <TableRow>
+                            <TableCell>#</TableCell>
                             <TableCell>Paises</TableCell>
                             <TableCell>Nuevos Confirmados</TableCell>
                             <TableCell>Total Confirmados</TableCell>
@@ -39,6 +40,7 @@ const TableCountries = ({
                             ).map((country, index) => {
                                 return (
                                     <TableRow key={index}>
+                                        <TableCell>{index + 1}</TableCell>
                                         <TableCell>{country.Country}</TableCell>
                                         <TableCell>{country.NewConfirmed}</TableCell>
                                         <TableCell>{country.TotalConfirmed}</TableCell>
