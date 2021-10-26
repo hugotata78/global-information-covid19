@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import Particles from "react-particles-js";
 
 
+
 function App() {
 
   const paramsParticles = {

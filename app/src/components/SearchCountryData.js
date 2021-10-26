@@ -3,21 +3,21 @@ import { Card, CardHeader } from "@material-ui/core";
 import CountryData from './CountryData';
 
 const SearchCountryData = ({ Countries }) => {
-    const [textValue, setTextValue] = useState()
-    const [ country, setCountry ] = useState(null)
-    
-    
+    const [textValue, setTextValue] = useState('')
+    const [country, setCountry] = useState(null)
+
+
     const handleFilterTextChange = (e) => {
         setTextValue(e.target.value);
-      };
-    
-    const handleKeyPress = (e) => {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          const data = Countries && Countries.find(item=> item.Country === textValue)
-          setCountry(data)
-        }
-      };
+    };
+
+    const handleOnClick = (e) => {
+        e.preventDefault();
+        const data = Countries && Countries.find(item => item.Country === textValue)
+        setCountry(data)
+        setTextValue('')
+    };
+
     return (
         <Card className='card card-form'>
             <CardHeader
@@ -31,7 +31,6 @@ const SearchCountryData = ({ Countries }) => {
                         list="data"
                         placeholder="Buscar país..."
                         value={textValue}
-                        onKeyPress={handleKeyPress}
                         onChange={handleFilterTextChange}
                     />
                     <datalist id="data">
@@ -40,6 +39,7 @@ const SearchCountryData = ({ Countries }) => {
                                 <option key={key} value={item.Country} />
                             ))}
                     </datalist>
+                    <button onClick={handleOnClick}>Enviar</button>
                 </form>
                 <div>
                     <div>{!country ? "Sin resultados..." : <CountryData country={country} />}</div>

@@ -27,7 +27,7 @@ const CountryData = ({ country }) => {
                         </ListItemAvatar>
                         <ListItemText
                             primary={country && country.NewConfirmed}
-                            secondary='Nuevos casos confirmados'
+                            secondary='Nuevos confirmados'
                         />
                     </ListItem>
                     <ListItem>
@@ -38,7 +38,7 @@ const CountryData = ({ country }) => {
                         </ListItemAvatar>
                         <ListItemText
                             primary={country && country.TotalConfirmed}
-                            secondary='Total casos confirmados'
+                            secondary='Total confirmados'
                         />
                     </ListItem>
                     <ListItem>

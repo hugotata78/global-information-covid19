@@ -37,7 +37,7 @@ const GlobalInfo = ({ Global }) => {
                         </ListItemAvatar>
                         <ListItemText
                             primary={Global && Global.NewConfirmed}
-                            secondary='Nuevos casos confirmados'
+                            secondary='Nuevos confirmados'
                         />
                     </ListItem>
                     <ListItem>
@@ -48,7 +48,7 @@ const GlobalInfo = ({ Global }) => {
                         </ListItemAvatar>
                         <ListItemText
                             primary={Global && Global.TotalConfirmed}
-                            secondary='Total casos confirmados'
+                            secondary='Total confirmados'
                         />
                     </ListItem>
                     <ListItem>
@@ -98,6 +98,7 @@ const GlobalInfo = ({ Global }) => {
                         />
                     </ListItem>
                 </List>
+
             </div>
         </Card>
     )
